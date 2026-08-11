@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Full raw job-photo library (kept locally for future pages; not needed by the live site)
+assets/images/gallery/

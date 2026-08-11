@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Odyssey Scaffolding | Domestic &amp; Commercial Scaffolding — Greater London &amp; Surrey</title>
+  <meta name="description" content="Odyssey Scaffolding provides safe, reliable domestic and commercial scaffolding across Greater London, Surrey and the surrounding areas. Over 15 years' experience. Free, competitive quotations." />
+
+  <!-- Favicon (built from the Odyssey scaffold-frame mark) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/brand/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/brand/favicon-64.png" />
+  <link rel="apple-touch-icon" href="assets/images/brand/favicon-180.png" />
+
+  <!-- Fonts: Saira (engineered headings) + Barlow (body). Real, on-brand, non-generic. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Mark that JS is available BEFORE render, so scroll-reveal only hides content
+       when JS can reveal it again (graceful degradation if JS is off/fails). -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- ============================================================= -->
+  <!-- HEADER / NAV                                                   -->
+  <!-- ============================================================= -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="site-logo" href="#top" aria-label="Odyssey Scaffolding — home">
+        <img src="assets/images/brand/odyssey-logo.jpg" alt="Odyssey Scaffolding" />
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <!-- NOTE: Domestic/Commercial point to on-page sections for now.
+             When the dedicated pages are built later, repoint to /domestic-scaffolding etc. -->
+        <a href="#top">Home</a>
+        <a href="#domestic">Domestic Scaffolding</a>
+        <a href="#commercial">Commercial Scaffolding</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-phone" href="tel:07351009255">
+          <span class="header-phone__label">Call us</span>
+          <span class="header-phone__num">07351 009255</span>
+        </a>
+        <a class="btn btn--amber header-cta" href="#contact">Get a Free Quote</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <a href="#top">Home</a>
+      <a href="#domestic">Domestic Scaffolding</a>
+      <a href="#commercial">Commercial Scaffolding</a>
+      <a href="#services">Our Services</a>
+      <a href="#contact">Contact Us</a>
+      <a class="btn btn--amber" href="#contact">Get a Free Quote</a>
+      <a class="mobile-nav__call" href="tel:07351009255">Call 07351 009255</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================= -->
+    <!-- HERO                                                          -->
+    <!-- ============================================================= -->
+    <!-- PLACEHOLDER: hero background is one of the client's real job photos standing in
+         for a proper "building wrapped in scaffold" shot. Swap assets/images/hero.jpg
+         for a supplied hero image (ideally a full scaffold-wrap, landscape, big sky). -->
+    <section class="hero" id="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/images/hero.jpg" alt="" fetchpriority="high" />
+        <div class="hero__scrim"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <p class="eyebrow eyebrow--onDark">Greater London &amp; Surrey &middot; Over 15 years' experience</p>
+        <h1 class="hero__title">Scaffolding you<br />can build on.</h1>
+        <p class="hero__sub">
+          Safe, reliable and professionally installed scaffolding for domestic and
+          commercial projects across Greater London, Surrey and the surrounding areas.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--amber btn--lg" href="#contact">Get a Free Quote</a>
+          <a class="btn btn--ghost btn--lg" href="tel:07351009255">Call 07351&nbsp;009255</a>
+        </div>
+      </div>
+
+      <!-- Slim proof strip, kept inside the hero so it lands on the first screen -->
+      <div class="hero__strip">
+        <div class="container hero__strip-inner">
+          <span><strong>15+ years</strong> in the trade</span>
+          <span><strong>Domestic &amp; commercial</strong> specialists</span>
+          <span><strong>Health &amp; safety</strong> first, every site</span>
+          <span><strong>Free, competitive</strong> quotations</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- ABOUT                                                         -->
+    <!-- ============================================================= -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__lead">
+          <p class="eyebrow">About Odyssey Scaffolding</p>
+          <h2 class="section-title">Professional scaffolding across Greater&nbsp;London &amp; Surrey</h2>
+        </div>
+        <div class="about__body">
+          <p class="lead-para">
+            At Odyssey Scaffolding we provide safe, reliable and professionally installed
+            scaffolding solutions for domestic and commercial projects throughout Greater
+            London, Surrey and the surrounding areas. With over 15 years of experience, we've
+            built our business around high standards of workmanship, dependable service and a
+            strong commitment to health and safety.
+          </p>
+          <p>
+            Whether you need scaffolding for a small residential property, a large commercial
+            development, renovation work or ongoing building maintenance, our experienced team
+            provides a scaffolding system designed around the specific requirements of your
+            project. We understand that every site is different — so we assess access, working
+            requirements and site conditions before recommending the most suitable solution.
+          </p>
+          <p class="about__who">
+            We work with homeowners, builders, roofing contractors, property developers,
+            construction companies, landlords, managing agents and commercial businesses —
+            on projects of every size.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- SERVICES — the six scaffold types (as per reference site)     -->
+    <!-- ============================================================= -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">What we do</p>
+          <h2 class="section-title">Our scaffolding services</h2>
+          <p class="section-intro">
+            A complete access service — planned, erected, inspected and dismantled by an
+            experienced, safety-focused team.
+          </p>
+        </div>
+
+        <!-- Text-led tiles (no decorative icons). Scaffold-line motif + amber accent on hover. -->
+        <ul class="services-grid">
+          <li class="service-card reveal">
+            <span class="service-card__rule" aria-hidden="true"></span>
+            <h3>Scaffolding planning &amp; design</h3>
+            <p>Every job assessed and designed around your property, access and the work being carried out.</p>
+          </li>
+          <li class="service-card reveal">
+            <span class="service-card__rule" aria-hidden="true"></span>
+            <h3>Scaffolding erection</h3>
+            <p>Safe, stable working platforms erected on time so other trades can get on with the job.</p>
+          </li>
+          <li class="service-card reveal">
+            <span class="service-card__rule" aria-hidden="true"></span>
+            <h3>Scaffold dismantling</h3>
+            <p>Prompt, tidy dismantling and removal once the work is complete, with minimal disruption.</p>
+          </li>
+          <li class="service-card reveal">
+            <span class="service-card__rule" aria-hidden="true"></span>
+            <h3>Scaffolding inspections</h3>
+            <p>Regular inspections keep every structure safe and compliant for the life of the project.</p>
+          </li>
+          <li class="service-card reveal">
+            <span class="service-card__rule" aria-hidden="true"></span>
+            <h3>Emergency scaffolding</h3>
+            <p>A responsive local service for urgent access, storm damage and unexpected issues.</p>
+          </li>
+          <li class="service-card reveal">
+            <span class="service-card__rule" aria-hidden="true"></span>
+            <h3>Access platforms</h3>
+            <p>Tailored access solutions for restricted sites, busy urban locations and awkward properties.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- DOMESTIC + COMMERCIAL — two doors                             -->
+    <!-- ============================================================= -->
+    <section class="split" id="domestic">
+      <div class="split__panel split__panel--domestic">
+        <div class="split__media">
+          <img src="assets/images/domestic.jpg" alt="A residential property with Odyssey scaffolding in place" loading="lazy" />
+        </div>
+        <div class="split__content">
+          <p class="eyebrow">For homeowners &amp; trades</p>
+          <h2 class="split__title">Domestic scaffolding</h2>
+          <p>
+            Reliable residential scaffolding for homeowners, builders, roofers and other trades —
+            from a simple tower for minor repairs to a full scaffold for a major renovation,
+            extension or new roof. Every installation is planned around your property to keep
+            disruption to a minimum.
+          </p>
+          <ul class="tag-list">
+            <li>Roofing &amp; chimney work</li>
+            <li>Extensions &amp; loft conversions</li>
+            <li>Rendering &amp; repointing</li>
+            <li>Guttering, fascias &amp; soffits</li>
+            <li>Painting &amp; decorating</li>
+            <li>Temporary roofs</li>
+          </ul>
+          <a class="btn btn--navy" href="#contact">Enquire about domestic scaffolding</a>
+        </div>
+      </div>
+
+      <div class="split__panel split__panel--commercial" id="commercial">
+        <div class="split__media">
+          <!-- PLACEHOLDER: no dedicated commercial project photo exists yet — this is a real
+               domestic/roofing job standing in. Replace assets/images/commercial.jpg with a
+               genuine commercial/construction scaffold photo when available. -->
+          <img src="assets/images/commercial.jpg" alt="A larger scaffolding installation on a construction project" loading="lazy" />
+        </div>
+        <div class="split__content">
+          <p class="eyebrow">For contractors, developers &amp; businesses</p>
+          <h2 class="split__title">Commercial scaffolding</h2>
+          <p>
+            Dependable commercial scaffolding for construction, refurbishment and property
+            maintenance. We understand the demands of commercial sites — timescales, coordination
+            and reliable access — and work closely with contractors and other trades from
+            installation through to dismantling.
+          </p>
+          <ul class="tag-list">
+            <li>Construction &amp; new build</li>
+            <li>Commercial premises</li>
+            <li>Refurbishment</li>
+            <li>Temporary roof systems</li>
+            <li>Cladding &amp; rendering</li>
+            <li>Property maintenance</li>
+          </ul>
+          <a class="btn btn--navy" href="#contact">Enquire about commercial scaffolding</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- "WE CAN PROVIDE SCAFFOLDING FOR" — editorial list             -->
+    <!-- ============================================================= -->
+    <section class="section uses">
+      <div class="container uses__grid">
+        <div class="uses__intro">
+          <p class="eyebrow">Whatever the project</p>
+          <h2 class="section-title">Scaffolding for jobs of every size</h2>
+          <p>
+            From straightforward access for residential repairs to larger, more complex
+            commercial installations — our aim is a safe, efficient working platform that lets
+            every other trade work effectively.
+          </p>
+        </div>
+        <ul class="uses__list">
+          <li>House renovations &amp; refurbishments</li>
+          <li>Roofing &amp; chimney work</li>
+          <li>Extensions &amp; loft conversions</li>
+          <li>New-build developments</li>
+          <li>Painting &amp; decorating</li>
+          <li>Rendering &amp; external repairs</li>
+          <li>Window &amp; fascia replacement</li>
+          <li>Commercial construction projects</li>
+          <li>Property maintenance</li>
+          <li>Temporary access requirements</li>
+          <li>Building restoration projects</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- SHOWCASE — real job photos                                    -->
+    <!-- ============================================================= -->
+    <section class="section showcase">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Recent work</p>
+          <h2 class="section-title">On the job across the region</h2>
+          <p class="section-intro">
+            A selection of recent projects — roofing access, chimney and extension work and
+            full property scaffolds.
+          </p>
+        </div>
+      </div>
+      <!-- Real, client-owned photography (localised from the current company's gallery). -->
+      <div class="showcase__strip">
+        <figure class="showcase__item reveal"><img src="assets/images/g1.jpg" alt="Roof re-timbering with new skylights, working from scaffold" loading="lazy" /></figure>
+        <figure class="showcase__item reveal"><img src="assets/images/g2.jpg" alt="Chimney and skylight detail with scaffold access" loading="lazy" /></figure>
+        <figure class="showcase__item reveal"><img src="assets/images/g3.jpg" alt="Newly tiled pitched roof completed from scaffold" loading="lazy" /></figure>
+        <figure class="showcase__item reveal"><img src="assets/images/g4.jpg" alt="Residential project with site access in progress" loading="lazy" /></figure>
+        <figure class="showcase__item reveal"><img src="assets/images/g5.jpg" alt="Roof structure exposed during works, scaffold boarded out" loading="lazy" /></figure>
+        <figure class="showcase__item reveal"><img src="assets/images/g6.jpg" alt="Chimney and bay window scaffold detail" loading="lazy" /></figure>
+        <figure class="showcase__item reveal"><img src="assets/images/g7.jpg" alt="Fresh grey tiled roof laid from scaffold platform" loading="lazy" /></figure>
+        <figure class="showcase__item reveal"><img src="assets/images/g8.jpg" alt="Bungalow re-roof with big open sky, scaffold in place" loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- PROOF BAND — 15 years / why choose                            -->
+    <!-- ============================================================= -->
+    <section class="section why">
+      <div class="container why__grid">
+        <div class="why__lead">
+          <p class="eyebrow eyebrow--onDark">Why Odyssey</p>
+          <h2 class="section-title section-title--onDark">15 years of getting every installation right</h2>
+          <p class="why__text">
+            Scaffolding plays a vital role in the safety and efficiency of a project — which is
+            why careful planning, professional installation and attention to detail are central
+            to the way we work. From the first enquiry through to dismantling, we make the
+            process straightforward and hassle-free.
+          </p>
+          <a class="btn btn--amber btn--lg" href="#contact">Arrange a competitive quote</a>
+        </div>
+        <ul class="why__points">
+          <li class="reveal"><h3>Experienced team</h3><p>Over 15 years working on residential, commercial and construction sites across the region.</p></li>
+          <li class="reveal"><h3>Safety-led</h3><p>Every scaffold installed with careful consideration for the property, workers and the public.</p></li>
+          <li class="reveal"><h3>Reliable scheduling</h3><p>Erection and dismantling arranged efficiently, with clear communication throughout the job.</p></li>
+          <li class="reveal"><h3>Competitive pricing</h3><p>Competitive quotations without compromising on safety, reliability or quality.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- TESTIMONIALS — PLACEHOLDER (brief provided none)              -->
+    <!-- ============================================================= -->
+    <!-- PLACEHOLDER: the quotes and names below are INVENTED placeholders so the layout is
+         ready. Replace with real, attributable client reviews (or delete this section).
+         Do not publish these as genuine testimonials. -->
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">What clients say</p>
+          <h2 class="section-title">Trusted by homeowners &amp; contractors</h2>
+        </div>
+        <div class="testi reveal" id="testi">
+          <div class="testi__viewport" id="testiViewport">
+            <div class="testi__track" id="testiTrack">
+              <blockquote class="testi__slide">
+                <span class="testi__mark" aria-hidden="true">&ldquo;</span>
+                <p>Professional from start to finish. The scaffold went up on time and the team were tidy and easy to deal with. Would happily recommend.</p>
+                <cite>Placeholder name <span>— Homeowner, Surrey</span></cite>
+              </blockquote>
+              <blockquote class="testi__slide">
+                <span class="testi__mark" aria-hidden="true">&ldquo;</span>
+                <p>We use Odyssey across our sites. Reliable scheduling and safe work every time, which keeps our projects moving.</p>
+                <cite>Placeholder name <span>— Building contractor, London</span></cite>
+              </blockquote>
+              <blockquote class="testi__slide">
+                <span class="testi__mark" aria-hidden="true">&ldquo;</span>
+                <p>Great communication throughout and a genuinely competitive price. The scaffold made a big roof job far easier and safer for everyone on site.</p>
+                <cite>Placeholder name <span>— Roofing contractor, London</span></cite>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="testi__controls">
+            <button class="testi__arrow" type="button" data-dir="-1" aria-label="Previous testimonial">&lsaquo;</button>
+            <div class="testi__dots" id="testiDots" aria-label="Choose testimonial"></div>
+            <button class="testi__arrow" type="button" data-dir="1" aria-label="Next testimonial">&rsaquo;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- CONTACT / CTA                                                 -->
+    <!-- ============================================================= -->
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__lead">
+          <p class="eyebrow eyebrow--onDark">Get in touch</p>
+          <h2 class="section-title section-title--onDark">Arrange your competitive scaffolding quote</h2>
+          <p class="contact__text">
+            Tell us about your project across Greater London, Surrey and the surrounding areas —
+            we'll recommend the right scaffolding solution and provide a competitive quotation.
+          </p>
+
+          <ul class="contact__methods">
+            <li>
+              <span class="contact__label">Call</span>
+              <a href="tel:07351009255">07351 009255</a>
+            </li>
+            <li>
+              <span class="contact__label">Email</span>
+              <a href="mailto:info@odysseyscaffolding.co.uk">info@odysseyscaffolding.co.uk</a>
+            </li>
+            <li>
+              <span class="contact__label">Area covered</span>
+              <span>Greater London, Surrey &amp; surrounding areas</span>
+            </li>
+          </ul>
+
+          <div class="contact__buttons">
+            <a class="btn btn--whatsapp btn--lg" href="https://wa.me/447351009255?text=Hi%20Odyssey%20Scaffolding%2C%20I%27d%20like%20a%20quote" target="_blank" rel="noopener">
+              <span class="wa-glyph" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </span>
+              WhatsApp us
+            </a>
+            <a class="btn btn--amber btn--lg" href="tel:07351009255">Call for a quote</a>
+          </div>
+        </div>
+
+        <aside class="contact__card">
+          <h3>Quick enquiry</h3>
+          <p class="contact__card-text">
+            Send us a few details and we'll get straight back to you with a competitive quote.
+          </p>
+
+          <!-- PLACEHOLDER (submission method): with no backend this form composes a pre-filled
+               email to info@odysseyscaffolding.co.uk and opens the visitor's mail app (see main.js).
+               When hosting, swap this for a real endpoint, e.g.:
+                 <form action="https://formspree.io/f/XXXX" method="POST"> ... </form>
+               (Formspree / Netlify Forms / Web3Forms) and remove the mailto handler in main.js. -->
+          <form class="enquiry-form" id="enquiryForm" aria-label="Quick enquiry form">
+            <div class="field">
+              <label for="ef-name">Name</label>
+              <input id="ef-name" name="name" type="text" required autocomplete="name" placeholder="Your name" />
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="ef-phone">Phone</label>
+                <input id="ef-phone" name="phone" type="tel" required autocomplete="tel" placeholder="07…" />
+              </div>
+              <div class="field">
+                <label for="ef-email">Email <span class="field__opt">(optional)</span></label>
+                <input id="ef-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="ef-service">Enquiry type</label>
+              <select id="ef-service" name="service">
+                <option value="Domestic scaffolding">Domestic scaffolding</option>
+                <option value="Commercial scaffolding">Commercial scaffolding</option>
+                <option value="Other / not sure">Other / not sure</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="ef-message">Tell us about the job</label>
+              <textarea id="ef-message" name="message" rows="3" placeholder="Property type, what the work is for, and rough dates…"></textarea>
+            </div>
+
+            <button class="btn btn--amber btn--block enquiry-form__submit" type="submit">Send enquiry</button>
+            <p class="enquiry-form__status" id="efStatus" role="status" aria-live="polite" hidden></p>
+            <p class="enquiry-form__note">Prefer to talk? Call or WhatsApp <a href="tel:07351009255">07351&nbsp;009255</a>.</p>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================= -->
+  <!-- FOOTER                                                         -->
+  <!-- ============================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/brand/odyssey-logo.jpg" alt="Odyssey Scaffolding" class="footer-logo" />
+        <p>Safe, reliable domestic and commercial scaffolding across Greater London, Surrey and the surrounding areas.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="#top">Home</a>
+        <a href="#domestic">Domestic Scaffolding</a>
+        <a href="#commercial">Commercial Scaffolding</a>
+        <a href="#services">Our Services</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:07351009255">07351 009255</a>
+        <a href="mailto:info@odysseyscaffolding.co.uk">info@odysseyscaffolding.co.uk</a>
+        <a href="https://odysseyscaffolding.co.uk">www.odysseyscaffolding.co.uk</a>
+        <span class="footer-area">Greater London &amp; Surrey</span>
+        <!-- No social media (per brief). WhatsApp is the direct-message channel. -->
+        <a class="footer-wa" href="https://wa.me/447351009255?text=Hi%20Odyssey%20Scaffolding%2C%20I%27d%20like%20a%20quote" target="_blank" rel="noopener">Message us on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> Odyssey Scaffolding. All rights reserved.</p>
+      <p class="footer-credit">Domestic &amp; commercial scaffolding — Greater London &amp; Surrey.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky WhatsApp button → 07351 009255 -->
+  <a class="wa-fab" href="https://wa.me/447351009255?text=Hi%20Odyssey%20Scaffolding%2C%20I%27d%20like%20a%20quote"
+     target="_blank" rel="noopener" aria-label="Message Odyssey Scaffolding on WhatsApp">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+</html>
