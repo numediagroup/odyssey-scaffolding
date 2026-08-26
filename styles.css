@@ -613,3 +613,120 @@ ul { margin: 0; padding: 0; list-style: none; }
   .reveal { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
 }
+
+/* =================================================================
+   DOMESTIC SCAFFOLDING PAGE  (domestic-scaffolding.html)
+   Inner-page components only. Everything else on that page reuses the
+   homepage tokens, buttons, eyebrows, section titles, cards and grids.
+   ================================================================= */
+
+/* ---------- Current page in the nav ---------- */
+.main-nav a[aria-current="page"] { color: var(--white); }
+.main-nav a[aria-current="page"]::after { width: 100%; }
+.mobile-nav a[aria-current="page"] { color: var(--amber); }
+
+/* ---------- Inner-page hero (shorter than the homepage's full-viewport one) ---------- */
+.hero--page { min-height: min(70svh, 600px); }
+.hero--page .hero__title { font-size: var(--fs-h1); max-width: 18ch; }
+.hero--page .hero__inner { padding-top: clamp(2.5rem, 8vh, 5rem); }
+.hero--page .hero__media img { object-position: center 45%; }
+
+/* ---------- Intro (mirrors .about, minus the background line-drawing) ---------- */
+.dom-intro { background: var(--white); }
+.dom-intro__grid {
+  display: grid; grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 5vw, var(--s-7)); align-items: start;
+}
+.dom-intro__lead { position: sticky; top: calc(var(--header-h) + 1rem); }
+
+/* ---------- Services: intro + photo, then the card grid ---------- */
+.dom-services { background: var(--paper); }
+.dom-services__top {
+  display: grid; grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2rem, 5vw, var(--s-7)); align-items: center;
+  margin-bottom: clamp(2rem, 4vw, var(--s-6));
+}
+.dom-services__figure {
+  margin: 0; border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: 0 30px 60px -35px rgba(40,46,106,.6);
+}
+.dom-services__figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.dom-services__kicker {
+  font-family: var(--font-head); font-weight: 700; color: var(--navy);
+  font-size: var(--fs-h3); margin: var(--s-4) 0 0;
+}
+
+/* ---------- Navy band: photo + copy ---------- */
+.band { background: var(--navy); color: rgba(255,255,255,.85); overflow: hidden; }
+.band__grid {
+  display: grid; grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(2rem, 5vw, var(--s-7)); align-items: center;
+}
+.band__figure { margin: 0; border-radius: var(--radius-lg); overflow: hidden; }
+.band__figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .6s var(--ease); }
+.band__figure:hover img { transform: scale(1.04); }
+.band__body p { max-width: 62ch; }
+.band__body .tag-list { margin-bottom: 0; }
+
+/* ---------- Safety & standards: editorial two-column text (commercial page) ---------- */
+.standards { background: var(--paper); }
+.standards__head { max-width: 700px; margin-bottom: clamp(1.5rem, 3vw, var(--s-5)); }
+.standards__body { columns: 2; column-gap: clamp(2rem, 5vw, var(--s-7)); }
+.standards__body p { break-inside: avoid; margin-bottom: var(--s-4); }
+.standards__body p:last-child { margin-bottom: 0; }
+
+/* ---------- Closing area section ---------- */
+.area { background: var(--white); }
+.area__grid {
+  display: grid; grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2rem, 5vw, var(--s-7)); align-items: start;
+}
+.area__cta {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--amber);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, var(--s-5));
+  /* Rides along with the copy as you scroll the section, then releases at the
+     bottom of the grid. Needs .area__grid { align-items: start } to work. */
+  position: sticky;
+  top: calc(var(--header-h) + 1rem);
+}
+.area__cta h3 { color: var(--navy); font-size: var(--fs-h3); margin-bottom: var(--s-2); }
+.area__cta p { color: var(--ink-soft); font-size: var(--fs-small); }
+.area__actions { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-4); }
+
+/* ---------- Numbered steps (contact page) ---------- */
+.steps-section { background: var(--paper); }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-4); }
+.step {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--s-5) var(--s-4) var(--s-4);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
+}
+.step:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -24px rgba(40,46,106,.55); border-color: transparent; }
+.step__num {
+  display: block;
+  font-family: var(--font-head); font-weight: 800; font-size: 2.4rem; line-height: 1;
+  color: var(--amber); margin-bottom: var(--s-2);
+}
+.step h3 { font-size: var(--fs-h3); color: var(--navy); font-weight: 700; margin-bottom: var(--s-2); }
+.step p { color: var(--ink-soft); font-size: var(--fs-small); margin: 0; }
+
+/* ---------- Responsive (domestic page) ---------- */
+@media (max-width: 1024px) {
+  .dom-intro__grid, .dom-services__top, .band__grid, .area__grid { grid-template-columns: 1fr; }
+  .dom-intro__lead { position: static; }
+  .band__figure { order: -1; }
+  .area__cta { position: static; }   /* stacked layout — nothing to stick alongside */
+}
+@media (max-width: 860px) {
+  .standards__body { columns: 1; }
+  .steps { grid-template-columns: 1fr; }
+}
+@media (max-height: 720px) and (min-width: 861px) {
+  .hero--page .hero__title { font-size: clamp(2.2rem, 4.5vw, 3.2rem); }
+}

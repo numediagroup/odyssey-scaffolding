@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us — Scaffolding in Greater London &amp; Surrey | Odyssey Scaffolding</title>
+  <meta name="description" content="Contact Odyssey Scaffolding for domestic and commercial scaffolding across Greater London, Surrey and the surrounding areas. Call 07351 009255, WhatsApp or send an enquiry for a competitive quote." />
+
+  <!-- PLACEHOLDER: confirm the live domain before publishing. Netlify serves this file at
+       /contact (it strips the .html), so the canonical is the clean URL. -->
+  <link rel="canonical" href="https://odysseyscaffolding.co.uk/contact" />
+
+  <!-- Favicon (built from the Odyssey scaffold-frame mark) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/brand/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/brand/favicon-64.png" />
+  <link rel="apple-touch-icon" href="assets/images/brand/favicon-180.png" />
+
+  <!-- Fonts: Saira (engineered headings) + Barlow (body) — same as the rest of the site. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@500;600;700;800&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Mark that JS is available BEFORE render, so scroll-reveal only hides content
+       when JS can reveal it again (graceful degradation if JS is off/fails). -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- ============================================================= -->
+  <!-- HEADER / NAV                                                   -->
+  <!-- ============================================================= -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="site-logo" href="index.html" aria-label="Odyssey Scaffolding — home">
+        <img src="assets/images/brand/odyssey-logo.jpg" alt="Odyssey Scaffolding" />
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="domestic-scaffolding.html">Domestic Scaffolding</a>
+        <a href="commercial-scaffolding.html">Commercial Scaffolding</a>
+        <a href="contact.html" aria-current="page">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-phone" href="tel:07351009255">
+          <span class="header-phone__label">Call us</span>
+          <span class="header-phone__num">07351 009255</span>
+        </a>
+        <a class="btn btn--amber header-cta" href="#contact">Get a Free Quote</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <a href="index.html">Home</a>
+      <a href="domestic-scaffolding.html">Domestic Scaffolding</a>
+      <a href="commercial-scaffolding.html">Commercial Scaffolding</a>
+      <a href="index.html#services">Our Services</a>
+      <a href="contact.html" aria-current="page">Contact Us</a>
+      <a class="btn btn--amber" href="#contact">Get a Free Quote</a>
+      <a class="mobile-nav__call" href="tel:07351009255">Call 07351 009255</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================= -->
+    <!-- HERO                                                          -->
+    <!-- ============================================================= -->
+    <section class="hero hero--page" id="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/images/large-scaffolding-projects.jpg" alt="" fetchpriority="high" />
+        <div class="hero__scrim"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <p class="eyebrow eyebrow--onDark">Greater London &amp; Surrey &middot; 15 years' experience</p>
+        <h1 class="hero__title">Contact Odyssey Scaffolding</h1>
+        <p class="hero__sub">
+          Tell us about your project and we'll recommend the right scaffolding solution and
+          provide a competitive quotation. Call, WhatsApp or send an enquiry — whichever suits you.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--amber btn--lg" href="tel:07351009255">Call 07351&nbsp;009255</a>
+          <a class="btn btn--ghost btn--lg" href="#contact">Send an enquiry</a>
+        </div>
+      </div>
+
+      <!-- Slim proof strip, kept inside the hero so it lands on the first screen -->
+      <div class="hero__strip">
+        <div class="container hero__strip-inner">
+          <span><strong>Call</strong> 07351 009255</span>
+          <span><strong>Email</strong> info@odysseyscaffolding.co.uk</span>
+          <span><strong>WhatsApp</strong> welcome</span>
+          <span><strong>Greater London, Surrey</strong> &amp; surrounding areas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- CONTACT — the main event on this page                         -->
+    <!-- (same block used across the site)                             -->
+    <!-- ============================================================= -->
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__lead">
+          <p class="eyebrow eyebrow--onDark">Get in touch</p>
+          <h2 class="section-title section-title--onDark">Arrange your competitive scaffolding quote</h2>
+          <p class="contact__text">
+            We provide domestic and commercial scaffolding across Greater London, Surrey and the
+            surrounding areas. Whether it's a single repair or a full construction programme,
+            tell us what you need and we'll take it from there.
+          </p>
+
+          <ul class="contact__methods">
+            <li>
+              <span class="contact__label">Call</span>
+              <a href="tel:07351009255">07351 009255</a>
+            </li>
+            <li>
+              <span class="contact__label">Email</span>
+              <a href="mailto:info@odysseyscaffolding.co.uk">info@odysseyscaffolding.co.uk</a>
+            </li>
+            <li>
+              <span class="contact__label">WhatsApp</span>
+              <a href="https://wa.me/447351009255?text=Hi%20Odyssey%20Scaffolding%2C%20I%27d%20like%20a%20quote" target="_blank" rel="noopener">07351 009255</a>
+            </li>
+            <li>
+              <span class="contact__label">Area covered</span>
+              <span>Greater London, Surrey &amp; surrounding areas</span>
+            </li>
+          </ul>
+
+          <div class="contact__buttons">
+            <a class="btn btn--whatsapp btn--lg" href="https://wa.me/447351009255?text=Hi%20Odyssey%20Scaffolding%2C%20I%27d%20like%20a%20quote" target="_blank" rel="noopener">
+              <span class="wa-glyph" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </span>
+              WhatsApp us
+            </a>
+            <a class="btn btn--amber btn--lg" href="tel:07351009255">Call for a quote</a>
+          </div>
+        </div>
+
+        <aside class="contact__card">
+          <h3>Send an enquiry</h3>
+          <p class="contact__card-text">
+            Send us a few details and we'll get straight back to you with a competitive quote.
+          </p>
+
+          <!-- PLACEHOLDER (submission method): with no backend this form composes a pre-filled
+               email to info@odysseyscaffolding.co.uk and opens the visitor's mail app (see main.js).
+               When hosting, swap this for a real endpoint, e.g.:
+                 <form action="https://formspree.io/f/XXXX" method="POST"> ... </form>
+               (Formspree / Netlify Forms / Web3Forms) and remove the mailto handler in main.js. -->
+          <form class="enquiry-form" id="enquiryForm" aria-label="Enquiry form">
+            <div class="field">
+              <label for="ef-name">Name</label>
+              <input id="ef-name" name="name" type="text" required autocomplete="name" placeholder="Your name" />
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="ef-phone">Phone</label>
+                <input id="ef-phone" name="phone" type="tel" required autocomplete="tel" placeholder="07…" />
+              </div>
+              <div class="field">
+                <label for="ef-email">Email <span class="field__opt">(optional)</span></label>
+                <input id="ef-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="ef-service">Enquiry type</label>
+              <select id="ef-service" name="service">
+                <option value="Domestic scaffolding">Domestic scaffolding</option>
+                <option value="Commercial scaffolding">Commercial scaffolding</option>
+                <option value="Other / not sure">Other / not sure</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="ef-message">Tell us about the job</label>
+              <textarea id="ef-message" name="message" rows="4" placeholder="Property type, what the work is for, and rough dates…"></textarea>
+            </div>
+
+            <button class="btn btn--amber btn--block enquiry-form__submit" type="submit">Send enquiry</button>
+            <p class="enquiry-form__status" id="efStatus" role="status" aria-live="polite" hidden></p>
+            <p class="enquiry-form__note">Prefer to talk? Call or WhatsApp <a href="tel:07351009255">07351&nbsp;009255</a>.</p>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- WHAT HAPPENS NEXT                                             -->
+    <!-- NOTE: no copy was supplied for this page. These three steps    -->
+    <!-- restate wording already approved elsewhere on the site         -->
+    <!-- ("we assess access, working requirements and site conditions   -->
+    <!-- before recommending the most suitable solution"). No new       -->
+    <!-- promises about timings or process are made.                    -->
+    <!-- ============================================================= -->
+    <section class="section steps-section" id="what-happens">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">What happens next</p>
+          <h2 class="section-title">From enquiry to quotation</h2>
+        </div>
+
+        <ul class="steps">
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3>Tell us about the project</h3>
+            <p>Call, WhatsApp or send an enquiry with the property type, what the work is for and your rough dates.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3>We assess the requirements</h3>
+            <p>We look at access, working requirements and site conditions before recommending the most suitable solution.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3>You get a competitive quote</h3>
+            <p>A competitive quotation for the scaffolding your project needs, with no compromise on safety or reliability.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- TWO DOORS — domestic / commercial                             -->
+    <!-- (reuses the homepage split panels and their photos)           -->
+    <!-- ============================================================= -->
+    <section class="split" id="services">
+      <div class="split__panel split__panel--domestic">
+        <div class="split__media">
+          <img src="assets/images/reliable-domestic-scaffolding.jpg" alt="Scaffolding erected to the gable end and roof edge of a brick house" loading="lazy" width="1000" height="693" />
+        </div>
+        <div class="split__content">
+          <p class="eyebrow">For homeowners &amp; trades</p>
+          <h2 class="split__title">Domestic scaffolding</h2>
+          <p>
+            Reliable residential scaffolding for homeowners, builders, roofers and other trades —
+            from a simple tower for minor repairs to a full scaffold for a major renovation,
+            extension or new roof.
+          </p>
+          <a class="btn btn--ghost" href="domestic-scaffolding.html">See domestic scaffolding</a>
+        </div>
+      </div>
+
+      <div class="split__panel split__panel--commercial">
+        <div class="split__media">
+          <img src="assets/images/professional-commercial-scaffolding.jpg" alt="Multi-lift scaffolding and timber formwork on a commercial construction site" loading="lazy" width="1000" height="667" />
+        </div>
+        <div class="split__content">
+          <p class="eyebrow">For contractors, developers &amp; businesses</p>
+          <h2 class="split__title">Commercial scaffolding</h2>
+          <p>
+            Dependable commercial scaffolding for construction, refurbishment and property
+            maintenance, working closely with contractors and other trades from installation
+            through to dismantling.
+          </p>
+          <a class="btn btn--ghost" href="commercial-scaffolding.html">See commercial scaffolding</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================= -->
+  <!-- FOOTER                                                         -->
+  <!-- ============================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/brand/odyssey-logo.jpg" alt="Odyssey Scaffolding" class="footer-logo" />
+        <p>Safe, reliable domestic and commercial scaffolding across Greater London, Surrey and the surrounding areas.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="domestic-scaffolding.html">Domestic Scaffolding</a>
+        <a href="commercial-scaffolding.html">Commercial Scaffolding</a>
+        <a href="index.html#services">Our Services</a>
+        <a href="contact.html" aria-current="page">Contact Us</a>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:07351009255">07351 009255</a>
+        <a href="mailto:info@odysseyscaffolding.co.uk">info@odysseyscaffolding.co.uk</a>
+        <a href="https://odysseyscaffolding.co.uk">www.odysseyscaffolding.co.uk</a>
+        <span class="footer-area">Greater London &amp; Surrey</span>
+        <!-- No social media (per brief). WhatsApp is the direct-message channel. -->
+        <a class="footer-wa" href="https://wa.me/447351009255?text=Hi%20Odyssey%20Scaffolding%2C%20I%27d%20like%20a%20quote" target="_blank" rel="noopener">Message us on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> Odyssey Scaffolding. All rights reserved.</p>
+      <p class="footer-credit">Domestic &amp; commercial scaffolding — Greater London &amp; Surrey.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky WhatsApp button → 07351 009255 -->
+  <a class="wa-fab" href="https://wa.me/447351009255?text=Hi%20Odyssey%20Scaffolding%2C%20I%27d%20like%20a%20quote"
+     target="_blank" rel="noopener" aria-label="Message Odyssey Scaffolding on WhatsApp">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ============================================================= -->
+  <!-- STRUCTURED DATA                                                -->
+  <!-- Only facts confirmed in the brief: phone, email, service area. -->
+  <!-- No street address, ratings, awards or opening hours are        -->
+  <!-- claimed — none were supplied.                                  -->
+  <!-- ============================================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://odysseyscaffolding.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://odysseyscaffolding.co.uk/contact" }
+        ]
+      },
+      {
+        "@type": "ContactPage",
+        "name": "Contact Odyssey Scaffolding",
+        "url": "https://odysseyscaffolding.co.uk/contact",
+        "about": {
+          "@type": "LocalBusiness",
+          "name": "Odyssey Scaffolding",
+          "url": "https://odysseyscaffolding.co.uk/",
+          "telephone": "+447351009255",
+          "email": "info@odysseyscaffolding.co.uk",
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Greater London" },
+            { "@type": "AdministrativeArea", "name": "Surrey" }
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Sales and enquiries",
+            "telephone": "+447351009255",
+            "email": "info@odysseyscaffolding.co.uk",
+            "areaServed": ["Greater London", "Surrey"],
+            "availableLanguage": "English"
+          }
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>
