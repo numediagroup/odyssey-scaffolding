@@ -8,7 +8,7 @@ Everything a stand-in was used for. Search the code for `PLACEHOLDER` to jump to
 | 2 | ~~Commercial section image~~ | — | **Resolved.** Now `large-scaffolding-projects.jpg` — a genuine commercial construction scaffold, replacing the domestic roofing job that stood in for it. |
 | 3 | **Testimonials (2 cards)** | `index.html` · "What clients say" section | **Real, attributable client reviews.** The two quotes + "Placeholder name" attributions are invented so the layout is ready — **do not publish them as real.** Give me real reviews, or say the word and I'll remove the section. |
 | 4 | ~~Domestic / Commercial nav links~~ | — | **Resolved.** Both pages now exist and every header, mobile-drawer and footer link points at the real page. |
-| 5 | **Website link in footer** | `index.html` · footer contact (`www.odysseyscaffolding.co.uk`) | Confirm the live domain once it's up (link points to `https://odysseyscaffolding.co.uk`). |
+| 5 | **Website link in footer** | all pages · footer contact | `odysseyscaffolding.co.uk` is **PARKED** — it returns the same blank 114-byte page for every path. The visible footer link therefore sends visitors to a blank page. Either remove the link until the domain is connected, or connect it. |
 | 6 | **Contact form — submission method** | `index.html` · Contact "Quick enquiry" form + handler in `main.js` (section 5) | The form (Name, Phone, Email, Enquiry type, Message) works now by composing a pre-filled email to info@odysseyscaffolding.co.uk and opening the visitor's mail app — **no backend needed locally.** When hosting, swap it for a real endpoint (Formspree / Netlify Forms / Web3Forms): give the `<form>` an `action`/`method` and delete the mailto handler in `main.js`. See the comment above the form in `index.html`. |
 | 7 | **Domestic + commercial page photography** | `domestic-scaffolding.html`, `commercial-scaffolding.html` | All six supplied images are **generic stock scaffolding photos, not Odyssey's own jobs** — unlike the homepage gallery, which is real client work. Swap for Odyssey's own photos when available. |
 | 8 | **`domestic-scaffolding-solutions.jpg` looks non-UK** | `domestic-scaffolding.html` · "Scaffolding for all types of residential work" | The property (roller shutters, render detail, architecture) reads as continental European, not Greater London / Surrey. Weakens credibility on a page targeting those areas — **recommend replacing this one first.** |
@@ -33,6 +33,8 @@ Everything a stand-in was used for. Search the code for `PLACEHOLDER` to jump to
 - **All body copy** — from the brief you supplied
 - **The 6 service tiles** — the same six as the reference site (MKR)
 - **Showcase photos + section images** — your own real job photos (localised from the BLP site)
+
+| 22 | **Canonical URLs point at the Netlify host** | all 4 pages | Set to `https://odyssey-scaffolding.netlify.app/...` because that is where the site actually lives. Canonicalising to the parked `odysseyscaffolding.co.uk` would have told Google the real version of each page was a blank parked page, keeping them out of search. **These MUST be updated when the real domain is connected** — same for the JSON-LD `url`/`provider.url` values. |
 
 ## Domestic & commercial pages — how the supplied copy was used
 (The contact page had no supplied copy at all — see rows 13–15.)

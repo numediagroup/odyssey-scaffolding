@@ -6,3 +6,6 @@
 
 # Full raw job-photo library (kept locally for future pages; not needed by the live site)
 assets/images/gallery/
+
+# Local Netlify folder
+.netlify
