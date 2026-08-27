@@ -529,6 +529,23 @@ ul { margin: 0; padding: 0; list-style: none; }
   border: 1px solid rgba(37,211,102,.5);
   color: #b8f5cf;
 }
+/* Submit states: sending / sent / failed */
+.enquiry-form__status.is-pending {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.28);
+  color: rgba(255,255,255,.82);
+}
+.enquiry-form__status.is-ok {
+  background: rgba(37,211,102,.14);
+  border-color: rgba(37,211,102,.5);
+  color: #b8f5cf;
+}
+.enquiry-form__status.is-err {
+  background: rgba(255,107,107,.14);
+  border-color: rgba(255,107,107,.55);
+  color: #ffc9c9;
+}
+.enquiry-form__submit[disabled] { opacity: .65; cursor: progress; }
 
 /* =================================================================
    FOOTER

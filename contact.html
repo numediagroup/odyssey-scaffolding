@@ -161,7 +161,14 @@
                When hosting, swap this for a real endpoint, e.g.:
                  <form action="https://formspree.io/f/XXXX" method="POST"> ... </form>
                (Formspree / Netlify Forms / Web3Forms) and remove the mailto handler in main.js. -->
-          <form class="enquiry-form" id="enquiryForm" aria-label="Enquiry form">
+          <!-- Posts to Formspree. action/method are on the form itself, so it still
+               works with JavaScript disabled; main.js intercepts it to submit in the
+               background and keep the visitor on the page. -->
+          <form class="enquiry-form" id="enquiryForm" aria-label="Enquiry form"
+                action="https://formspree.io/f/xljerlze" method="POST">
+            <!-- Honeypot: hidden from people, bots fill it, Formspree discards those. -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" hidden />
+            <input type="hidden" name="_subject" value="Website enquiry — Odyssey Scaffolding" />
             <div class="field">
               <label for="ef-name">Name</label>
               <input id="ef-name" name="name" type="text" required autocomplete="name" placeholder="Your name" />

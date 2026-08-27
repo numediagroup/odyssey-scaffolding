@@ -4,6 +4,7 @@
    2. Header shadow on scroll
    3. Scroll-reveal (IntersectionObserver)
    4. Current year in footer
+   5. Enquiry form -> Formspree (background submit, graceful fallback)
    ================================================================= */
 (function () {
   "use strict";
@@ -66,50 +67,57 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  /* ---- 5. Enquiry form ----
-     No backend on a static site, so on submit we build a pre-filled email to Odyssey and
-     open the visitor's mail app. Native HTML5 validation (required) gates the submit.
-     TO USE A REAL ENDPOINT WHEN HOSTED: give the <form> an action/method (Formspree /
-     Netlify Forms / Web3Forms) and delete this handler. */
+  /* ---- 5. Enquiry form -> Formspree ----
+     The <form> carries its own action/method, so with JavaScript disabled the browser
+     posts straight to Formspree and lands on their confirmation page. When JS is
+     available we intercept and submit in the background instead, so the visitor stays
+     on the page and gets an inline confirmation. */
   var form = document.getElementById("enquiryForm");
   var status = document.getElementById("efStatus");
-  if (form) {
+
+  if (form && form.getAttribute("action")) {
     form.addEventListener("submit", function (e) {
+      // No fetch/FormData? Let the browser do a normal POST rather than break the form.
+      if (!window.fetch || !window.FormData) return;
+
       e.preventDefault();
       if (typeof form.reportValidity === "function" && !form.reportValidity()) return;
 
-      var val = function (id) {
-        var el = document.getElementById(id);
-        return el ? el.value.trim() : "";
-      };
-      var name = val("ef-name"),
-          phone = val("ef-phone"),
-          email = val("ef-email"),
-          service = val("ef-service"),
-          message = val("ef-message");
+      var btn = form.querySelector(".enquiry-form__submit");
+      var btnLabel = btn ? btn.textContent : "";
 
-      var subject = "Website enquiry — " + service + (name ? " — " + name : "");
-      var lines = [
-        "Name: " + name,
-        "Phone: " + phone,
-        "Email: " + (email || "—"),
-        "Enquiry type: " + service,
-        "",
-        "Message:",
-        message || "—"
-      ];
-      var mailto =
-        "mailto:info@odysseyscaffolding.co.uk" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(lines.join("\n"));
-
-      window.location.href = mailto;
-
-      if (status) {
+      function say(msg, state) {
+        if (!status) return;
         status.hidden = false;
-        status.textContent =
-          "Opening your email app to send this enquiry. If nothing opens, call us on 07351 009255.";
+        status.className = "enquiry-form__status" + (state ? " " + state : "");
+        status.textContent = msg;
       }
+
+      if (btn) { btn.disabled = true; btn.textContent = "Sending\u2026"; }
+      say("Sending your enquiry\u2026", "is-pending");
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      })
+        .then(function (res) {
+          if (res.ok) {
+            form.reset();
+            say("Thanks \u2014 your enquiry has been sent. We'll get back to you shortly.", "is-ok");
+            return;
+          }
+          return res.json().then(function (data) {
+            var errs = (data && data.errors) || [];
+            throw new Error(errs.map(function (x) { return x.message; }).join(", ") || "Submission failed");
+          });
+        })
+        .catch(function () {
+          say("Sorry \u2014 that didn't send. Please call or WhatsApp 07351 009255.", "is-err");
+        })
+        .then(function () {
+          if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
+        });
     });
   }
 
