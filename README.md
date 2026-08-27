@@ -20,6 +20,7 @@ website/
 ├── domestic-scaffolding.html     ← Domestic Scaffolding page
 ├── commercial-scaffolding.html   ← Commercial Scaffolding page
 ├── contact.html                  ← Contact page
+├── privacy-policy.html           ← Privacy policy (linked from every footer)
 ├── styles.css                    ← all styling + responsive rules (all pages)
 ├── main.js                       ← mobile menu, scroll-reveal, header, footer year (all pages)
 └── assets/images/

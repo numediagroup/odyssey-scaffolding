@@ -36,6 +36,10 @@ Everything a stand-in was used for. Search the code for `PLACEHOLDER` to jump to
 
 | 22 | **Canonical URLs point at the Netlify host** | all 4 pages | Set to `https://odyssey-scaffolding.netlify.app/...` because that is where the site actually lives. Canonicalising to the parked `odysseyscaffolding.co.uk` would have told Google the real version of each page was a blank parked page, keeping them out of search. **These MUST be updated when the real domain is connected** — same for the JSON-LD `url`/`provider.url` values. |
 
+| 23 | **Privacy policy — NOT legally reviewed** | `privacy-policy.html` | Drafted to match what the site actually does (verified: no cookies, no analytics, mailto-only form). It is **not legal advice and has not been reviewed by a solicitor.** The client should check it before relying on it. |
+| 24 | **Privacy policy — missing client facts** | `privacy-policy.html` | Three PLACEHOLDER blocks in the page: (a) postal address + trading status + company number, (b) ICO registration number, (c) actual data retention periods. All three need the client. |
+| 25 | **Privacy policy must be rewritten if the form changes** | `privacy-policy.html` · "What information we collect" | The policy states plainly that no server receives form data, because the form is mailto-only. **The moment Netlify Forms or Formspree is switched on, that statement becomes false** and the processor must be listed under third parties. |
+
 ## Domestic & commercial pages — how the supplied copy was used
 (The contact page had no supplied copy at all — see rows 13–15.)
 - **Every word of the supplied copy is on each page**, in the order it was given.

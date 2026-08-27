@@ -544,6 +544,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-2); padding-block: var(--s-4); border-top: 1px solid rgba(255,255,255,.1); font-size: 0.82rem; }
 .footer-bottom p { margin: 0; }
 .footer-credit { color: rgba(255,255,255,.45); }
+.footer-credit a { color: rgba(255,255,255,.7); text-decoration: underline; text-underline-offset: 3px; transition: color .2s var(--ease); }
+.footer-credit a:hover { color: var(--amber); }
 
 /* =================================================================
    STICKY WHATSAPP FAB
@@ -716,6 +718,52 @@ ul { margin: 0; padding: 0; list-style: none; }
 .step h3 { font-size: var(--fs-h3); color: var(--navy); font-weight: 700; margin-bottom: var(--s-2); }
 .step p { color: var(--ink-soft); font-size: var(--fs-small); margin: 0; }
 
+/* ---------- Legal / long-form document pages ---------- */
+.legal { background: var(--white); }
+.legal__grid { display: grid; grid-template-columns: 260px 1fr; gap: clamp(2rem, 5vw, var(--s-7)); align-items: start; }
+.legal__toc { position: sticky; top: calc(var(--header-h) + 1rem); }
+.legal__toc h2 {
+  font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--navy); margin-bottom: var(--s-3);
+}
+.legal__toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.15rem; }
+.legal__toc a {
+  display: block; padding: 0.4rem 0 0.4rem var(--s-3);
+  border-left: 2px solid var(--line);
+  font-size: var(--fs-small); color: var(--ink-soft);
+  transition: color .2s var(--ease), border-color .2s var(--ease);
+}
+.legal__toc a:hover { color: var(--navy); border-left-color: var(--amber); }
+
+.legal__body { max-width: 68ch; }
+.legal__updated {
+  font-family: var(--font-head); font-weight: 600; font-size: var(--fs-small);
+  color: var(--ink-soft); border-left: 3px solid var(--amber);
+  padding-left: var(--s-3); margin-bottom: var(--s-5);
+}
+.legal__body h2 {
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem); color: var(--navy); font-weight: 800;
+  margin: var(--s-6) 0 var(--s-3); scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+.legal__body h2:first-of-type { margin-top: 0; }
+.legal__body h3 { font-size: 1.05rem; color: var(--navy); margin: var(--s-4) 0 var(--s-2); }
+.legal__body p, .legal__body li { color: var(--ink); }
+.legal__body ul { display: grid; gap: var(--s-2); margin: 0 0 var(--s-3); }
+.legal__body ul li { display: flex; gap: 0.7rem; align-items: baseline; }
+.legal__body ul li::before {
+  content: ""; width: 7px; height: 7px; background: var(--amber);
+  flex-shrink: 0; transform: translateY(-1px);
+}
+.legal__note {
+  background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--amber);
+  border-radius: var(--radius-lg); padding: var(--s-4); margin: var(--s-4) 0;
+}
+.legal__note p:last-child { margin-bottom: 0; }
+.legal__body table { width: 100%; border-collapse: collapse; margin: 0 0 var(--s-4); font-size: var(--fs-small); }
+.legal__body th, .legal__body td { text-align: left; padding: var(--s-2) var(--s-3); border-bottom: 1px solid var(--line); vertical-align: top; }
+.legal__body th { font-family: var(--font-head); color: var(--navy); font-weight: 700; }
+.legal__scroll { overflow-x: auto; }
+
 /* ---------- Responsive (domestic page) ---------- */
 @media (max-width: 1024px) {
   .dom-intro__grid, .dom-services__top, .band__grid, .area__grid { grid-template-columns: 1fr; }
@@ -726,6 +774,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 860px) {
   .standards__body { columns: 1; }
   .steps { grid-template-columns: 1fr; }
+}
+@media (max-width: 1024px) {
+  .legal__grid { grid-template-columns: 1fr; }
+  .legal__toc { position: static; }
 }
 @media (max-height: 720px) and (min-width: 861px) {
   .hero--page .hero__title { font-size: clamp(2.2rem, 4.5vw, 3.2rem); }
