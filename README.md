@@ -21,6 +21,7 @@ website/
 ├── commercial-scaffolding.html   ← Commercial Scaffolding page
 ├── contact.html                  ← Contact page
 ├── privacy-policy.html           ← Privacy policy (linked from every footer)
+│                                  The site sets NO cookies and uses no analytics.
 ├── styles.css                    ← all styling + responsive rules (all pages)
 ├── main.js                       ← mobile menu, scroll-reveal, header, footer year (all pages)
 └── assets/images/

@@ -45,9 +45,11 @@ Everything a stand-in was used for. Search the code for `PLACEHOLDER` to jump to
 | 28 | **Formspree free tier: 50 submissions/month** | all forms | Above that, submissions are rejected and enquiries are lost. Worth watching once traffic picks up, and worth confirming the Formspree account is set to email the right address. |
 | 29 | **First Formspree submission may need confirming** | — | Formspree often requires the account owner to confirm the first submission before it starts forwarding. **Send one real test enquiry and check it arrives** before relying on the form. |
 
-| 30 | **GA4 Measurement ID not yet added** | `consent.js` line 23 | `var GA_MEASUREMENT_ID = "";` — paste the `G-XXXXXXXXXX` value between the quotes. **Until it is filled in, no analytics load and the cookie banner does not appear**, so the privacy policy's analytics section describes something not yet happening. **Add the ID before deploying**, or temporarily revert the cookies section. |
-| 31 | **Google Search Console verification** | `index.html` `<head>` | If verifying by HTML tag rather than DNS, the `<meta name="google-site-verification" ...>` tag still needs adding. Not done — no verification code supplied. |
-| 32 | **Consent banner: no "reject" is not consent** | `consent.js` | A visitor who ignores the banner is treated as declined, which is correct under PECR. The banner reappears each visit until they choose. If that feels intrusive, the alternative is cookieless analytics with no banner at all. |
+| 30 | ~~GA4 Measurement ID~~ | — | **No longer applicable.** Client confirmed they are not using GA4. Analytics, the consent banner and `consent.js` have been removed entirely. |
+| 31 | ~~Google Search Console verification~~ | — | **No longer applicable.** Client confirmed they are not using Search Console. |
+| 32 | ~~Consent banner behaviour~~ | — | **No longer applicable.** The banner has been removed; the site sets no cookies, so nothing needs consenting to. |
+
+| 33 | **If analytics are ever added back** | `privacy-policy.html`, `styles.css` | The consent banner, `consent.js`, Consent Mode v2 wiring and the analytics version of the cookies section all exist in git history at commit `d929a21`. Restore from there rather than rewriting — and remember analytics cookies need consent BEFORE being set under UK PECR. |
 
 ## Domestic & commercial pages — how the supplied copy was used
 (The contact page had no supplied copy at all — see rows 13–15.)

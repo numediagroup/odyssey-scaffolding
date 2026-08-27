@@ -806,45 +806,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 .legal__body th { font-family: var(--font-head); color: var(--navy); font-weight: 700; }
 .legal__scroll { overflow-x: auto; }
 
-.legal__link-btn {
-  background: none; border: 0; padding: 0;
-  font: inherit; color: var(--navy); font-weight: 600;
-  text-decoration: underline; text-underline-offset: 3px; cursor: pointer;
-}
-.legal__link-btn:hover { color: var(--amber-dk); }
-
-/* ---------- Cookie consent bar ---------- */
-.cookie-bar {
-  position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
-  background: var(--navy-deep);
-  border-top: 2px solid var(--amber);
-  box-shadow: 0 -12px 40px -20px rgba(0,0,0,.8);
-  transform: translateY(110%);
-  transition: transform .3s var(--ease);
-}
-.cookie-bar.is-in { transform: none; }
-.cookie-bar__inner {
-  display: flex; align-items: center; gap: var(--s-4);
-  padding-block: var(--s-3);
-}
-.cookie-bar__text {
-  margin: 0; flex: 1 1 auto;
-  font-size: var(--fs-small); color: rgba(255,255,255,.85);
-  max-width: 78ch;
-}
-.cookie-bar__text a { color: var(--amber); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-.cookie-bar__actions { display: flex; gap: var(--s-2); flex-shrink: 0; }
-.cookie-bar__actions .btn { padding: 0.6em 1.2em; font-size: 0.9rem; }
-
-/* Keep the WhatsApp button clear of the bar while it is showing */
-.cookie-bar.is-in ~ .wa-fab { transform: translateY(-88px); }
-
-@media (max-width: 720px) {
-  .cookie-bar__inner { flex-direction: column; align-items: stretch; gap: var(--s-3); }
-  .cookie-bar__actions .btn { flex: 1 1 auto; }
-  .cookie-bar.is-in ~ .wa-fab { transform: translateY(-150px); }
-}
-
 /* ---------- Responsive (domestic page) ---------- */
 @media (max-width: 1024px) {
   .dom-intro__grid, .dom-services__top, .band__grid, .area__grid { grid-template-columns: 1fr; }
