@@ -45,6 +45,10 @@ Everything a stand-in was used for. Search the code for `PLACEHOLDER` to jump to
 | 28 | **Formspree free tier: 50 submissions/month** | all forms | Above that, submissions are rejected and enquiries are lost. Worth watching once traffic picks up, and worth confirming the Formspree account is set to email the right address. |
 | 29 | **First Formspree submission may need confirming** | — | Formspree often requires the account owner to confirm the first submission before it starts forwarding. **Send one real test enquiry and check it arrives** before relying on the form. |
 
+| 30 | **GA4 Measurement ID not yet added** | `consent.js` line 23 | `var GA_MEASUREMENT_ID = "";` — paste the `G-XXXXXXXXXX` value between the quotes. **Until it is filled in, no analytics load and the cookie banner does not appear**, so the privacy policy's analytics section describes something not yet happening. **Add the ID before deploying**, or temporarily revert the cookies section. |
+| 31 | **Google Search Console verification** | `index.html` `<head>` | If verifying by HTML tag rather than DNS, the `<meta name="google-site-verification" ...>` tag still needs adding. Not done — no verification code supplied. |
+| 32 | **Consent banner: no "reject" is not consent** | `consent.js` | A visitor who ignores the banner is treated as declined, which is correct under PECR. The banner reappears each visit until they choose. If that feels intrusive, the alternative is cookieless analytics with no banner at all. |
+
 ## Domestic & commercial pages — how the supplied copy was used
 (The contact page had no supplied copy at all — see rows 13–15.)
 - **Every word of the supplied copy is on each page**, in the order it was given.
