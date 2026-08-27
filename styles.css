@@ -759,11 +759,36 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding-left: var(--s-3); margin-bottom: var(--s-5);
 }
 .legal__body h2 {
-  font-size: clamp(1.3rem, 2.2vw, 1.6rem); color: var(--navy); font-weight: 800;
-  margin: var(--s-6) 0 var(--s-3); scroll-margin-top: calc(var(--header-h) + 1rem);
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+  line-height: 1.2;                       /* the global 1.05 is for display headings, too tight here */
+  color: var(--navy); font-weight: 800;
+  margin: var(--s-6) 0 var(--s-3);
+  scroll-margin-top: calc(var(--header-h) + 1rem);
 }
 .legal__body h2:first-of-type { margin-top: 0; }
-.legal__body h3 { font-size: 1.05rem; color: var(--navy); margin: var(--s-4) 0 var(--s-2); }
+
+/* Sub-headings read as small muted labels, not as a second title line. Without this
+   they sat 24px under an h2 in the same navy + same weight and the pair looked like
+   one clumped double-decker heading. */
+.legal__body h3 {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ink-soft);
+  margin: var(--s-5) 0 var(--s-2);
+}
+.legal__body h3::after {
+  content: "";
+  display: block;
+  width: 28px; height: 2px;
+  background: var(--amber);
+  margin-top: 0.55rem;
+}
+/* An h3 straight after an h2 belongs to it — sit closer, since the styling now
+   makes the level difference obvious on its own. */
+.legal__body h2 + h3 { margin-top: var(--s-4); }
 .legal__body p, .legal__body li { color: var(--ink); }
 .legal__body ul { display: grid; gap: var(--s-2); margin: 0 0 var(--s-3); }
 .legal__body ul li { display: flex; gap: 0.7rem; align-items: baseline; }
